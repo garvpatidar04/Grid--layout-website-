@@ -1,0 +1,79 @@
+body,html{
+    height: 100vh;
+}
+
+body{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: auto 27% 27% 27%;
+    grid-template-rows: 8% 22% auto 20%;
+    grid-template-areas: 
+    "aside header header header"
+    "aside sect1 sect2 sect3"
+    "aside main main main"
+    "aside footer footer footer";
+}
+
+aside{
+    grid-area: aside;
+    background-color: #007fff;
+}
+
+header{
+    grid-area: header;
+    background-color: #91c8ff;
+}
+
+section:nth-of-type(1){
+    grid-area: sect1;
+    background-color: #b3d8f3;
+}
+section:nth-of-type(2){
+    grid-area: sect2;
+    background-color: #5e86af;
+}
+section:nth-of-type(3){
+    grid-area: sect3;
+    background-color: #6d9fd2;
+}
+
+main{
+    grid-area: main;
+    background-color: #7da9d5;
+}
+
+footer{
+    grid-area: footer;
+    background-color: #588ec3;
+}
+
+p{
+    text-shadow: 5px 5px 5px #4a4b4b;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-variant-ligatures: historical-ligatures;
+}
+
+@media only screen and (max-width:600px){
+    body{
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 10% 16% 16% 16% 30% 10%;
+        grid-template-areas: 
+        "header"
+        "sect1"
+        "sect2"
+        "sect3"
+        "main"
+        "footer";
+    }
+
+    aside{
+        visibility: hidden;
+    }
+}
